@@ -8,7 +8,6 @@ if sys.version_info < (3, 4):
 else:
     import importlib
 
-sys.path.insert(0, ".")
 from coalib.misc.ContextManagers import retrieve_stdout
 from coalib import coala_ci
 from coalib.settings import ConfigurationGathering
