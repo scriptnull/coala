@@ -34,7 +34,7 @@ def parse_cli(arg_list=None,
                                         as keys and the sections themselves
                                         as value.
     """
-    arg_list = arg_list or sys.argv[1:]
+    arg_list = sys.argv[1:] if arg_list == None else arg_list
     arg_parser = arg_parser or default_arg_parser()
     origin += os.path.sep
     sections = OrderedDict(default=Section('Default'))
