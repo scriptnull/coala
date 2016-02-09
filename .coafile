@@ -18,11 +18,13 @@ default_actions = PEP8Bear: ApplyPatchAction
 # will be executed sequentially; also we need the LineLengthBear to double
 # check the line length because PEP8Bear sometimes itn't able to correct the
 # linelength.
-bears = SpaceConsistencyBear, PyUnusedCodeBear, LineLengthBear
+bears = SpaceConsistencyBear, PyUnusedCodeBear, LineLengthBear, \
+        PyImportSortBear
 
 default_actions =
     SpaceConsistencyBear: ApplyPatchAction,
-    PyUnusedCodeBear: ApplyPatchAction
+    PyUnusedCodeBear: ApplyPatchAction,
+    PyImportSortBear: ApplyPatchAction
 
 [DOCS]
 bears = SpaceConsistencyBear
