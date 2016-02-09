@@ -191,7 +191,7 @@ def find_user_config(file_path, max_trials=10):
     return ""
 
 
-def gather_configuration(acquire_settings, log_printer, arg_list=sys.argv[1:]):
+def gather_configuration(acquire_settings, log_printer, arg_list=None):
     """
     Loads all configuration files, retrieves bears and all needed
     settings, saves back if needed and warns about non-existent targets.
@@ -223,6 +223,7 @@ def gather_configuration(acquire_settings, log_printer, arg_list=sys.argv[1:]):
                                 section
                               * The targets list
     """
+    arg_list = sys.argv[1:] if arg_list == None else arg_list
     sections, targets = load_configuration(arg_list, log_printer)
     local_bears, global_bears = fill_settings(sections,
                                               acquire_settings,
